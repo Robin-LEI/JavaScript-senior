@@ -1,6 +1,9 @@
 # JavaScript-senior
-JavaScript高级学习
+JavaScript高级学习  
+目录  
 ### [lesson01-数据类型](#lesson01)
+### <a href="#lesson02">lesson02-再谈数据类型相关问题</a>
+
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
 2. 基本数据类型：String、Number、Boolean、undefined、null
@@ -12,7 +15,6 @@ JavaScript高级学习
 8. === 全等号可以用来判断undefined和null，不能用来判断数值，因为number数值不唯一，但是undefined和null的各自只有一个值
 9. intanceof 用来判断对象的具体类型，A(实例对象) intanceof B(构造函数)，意思是问A是不是B的实例？
 
-### <a href="#lesson02">lesson02-再谈数据类型相关问题</a>
 **<a name="lesson02">再谈数据类型</a>**
 1. 对象分为两种，实例对象和类型对象， function Person() {} //这是一个构造函数，var p = new Person()，Person本身是一个类型对象，p就是一个实例对象
 2. undefined和null有什么区别？undefined是变量定义了但是并没有赋值，但是null是变量定义了且为该变量赋值为null，那么在什么情况下我们需要为变量赋值为null呢？var b = null; //说明我们将要为b赋值一个对象，最后再次将b = null，目的是让b指向的对象为垃圾对象（被垃圾回收器回收）
