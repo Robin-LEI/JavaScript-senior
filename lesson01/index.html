@@ -12,6 +12,16 @@
 				console.log('b3')
 			}
 		}
+		console.log(typeof b1) // object
+		console.log(typeof b1.b2) // object
+		console.log(typeof b1.b2[2]) // function
+		console.log(typeof b1.b3) // function
+
+		console.log(b1 instanceof Object) // true
+		console.log(b1.b2 instanceof Object) // true
+		console.log(b1.b2 instanceof Array) // true
+		console.log(b1.b3 instanceof Function) // true
+		console.log(b1.b3 instanceof Object) // true
 	</script>
 </body>
 </html>
