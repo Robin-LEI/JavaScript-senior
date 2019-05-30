@@ -1,7 +1,7 @@
 # JavaScript-senior
 JavaScript高级学习
-### [lesson01-数据类型](#lesson01)
-**<span id="lesson01">数据类型</span>**
+### [lesson01-数据类型](#数据类型)
+**数据类型**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
 2. 基本数据类型：String、Number、Boolean、undefined、null
 3. 引用（对象）数据类型：Object、Array、Function ...
