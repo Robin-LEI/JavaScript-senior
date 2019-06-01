@@ -16,6 +16,7 @@ JavaScript高级学习
 ### [lesson13-显示原型与隐式原型](#lesson13)
 ### [lesson14-hold住原型链](#lesson14)
 ### [lesson15-补充原型链](#lesson15)
+### [lesson16-原型链的属性问题](#lesson16)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -174,6 +175,11 @@ JavaScript高级学习
 4. Object的原型对象时原型链的尽头
 5. demo
 	```
-	Object.prototype instanceof Object // false，因为Object.prototype.\__proto__为null  
+	Object.prototype instanceof Object // false，因为Object.prototype.__proto__为null  
 	Function.prototype instanceof Object // true
 	```
+
+**<span id="lesson16">原型链的属性问题</span>**
+1. 读取对象的属性时，会自动的到原型链中查找
+2. 设置对象的属性时，不会去查找原型链，如果当前对象中没有该属性，直接在当前对象中添加此属性并设置其值
+3. 方法一般定义在原型上，属性一般通过构造函数定义在对象本身上
