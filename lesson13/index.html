@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示原型与隐式原型</title>
+</head>
+<body>
+	<script>
+		// 定义一个构造函数
+		function Fn() {
+			// 内部语句
+			this.prototype = {}
+		}
+		var fn = new Fn() // 内部语句：this__proto__ = Fn.prototype
+		console.log(Fn.prototype === fn.__proto__) //true
+		// 给原型添加方法，实例对象可以使用
+		Fn.prototype.test = function() {}
+		fn.test()
+	</script>
+</body>
+</html>

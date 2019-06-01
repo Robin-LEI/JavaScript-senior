@@ -13,6 +13,7 @@ JavaScript高级学习
 ### [lesson10-函数中的this](#lesson10)
 ### [lesson11-分号到底加不加](#lesson11)
 ### [lesson12-函数的prototype](#lesson12)
+### [lesson13-显示原型与隐式原型](#lesson13)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -141,3 +142,13 @@ JavaScript高级学习
 2. 什么是空对象？就是其中没有我们的属性
 3. 原型对象中有一个属性constructor，它指向函数对象
 4. 给原型对象添加属性(一般是添加方法)，供实例对象访问
+
+**<span id="lesson13">显示原型与隐式原型</span>**
+1. 每个*函数*function都有一个prototype属性，也就是显示原型(属性)
+2. 每一个*实例对象*都有一个\__proto__属性，也就是隐式原型(属性)
+3. 对象的隐式原型的值是对应的构造函数的显示原型的值
+4. 函数的prototype属性是在定义函数时自动添加的，默认值是一个Object空对象
+5. 实例对象的\__proto__是在创建对象时自动添加的，默认值是构造函数的prototype属性值
+6. function Fn() {} //内部语句：this.prototype = {}
+7. var fn = new Fn() // 内部语句：this.__proto__ = Fn.prototype
+8. Fn.prototype === fn.__proto__ // true
