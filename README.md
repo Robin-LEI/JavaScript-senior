@@ -11,6 +11,7 @@ JavaScript高级学习
 ### [lesson08-认识回调函数](#lesson08)
 ### [lesson09-IIFE](#lesson09)
 ### [lesson10-函数中的this](#lesson10)
+### [lesson11-分号到底加不加](#lesson11)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -118,3 +119,18 @@ JavaScript高级学习
 	* p.test() // p
 	* new Test() // 新创建的实例对象
 	* p.call/apply(obj) // obj
+
+**<span id="lesson11">分号到底加不加</span>**
+1. 首先参考知乎上的一个回答[尤玉溪](https://www.zhihu.com/question/20298345?sort=created)
+2. 没有应该不应该，只有喜欢不喜欢
+3. 下列两种情况下必须要加分号，否则可能会出现问题
+	* ()开头前一条语句要加分号
+	* []开头前一条语句要加分号
+4. demo
+	```
+	var a = 4
+	(function() {...})() // 程序出错
+	var b = 5
+	[1,2,3].forEach(item => {...}) // 程序出错
+	```
+5. 上述条件下加分号，也有利与降低代码合并带来的风险
