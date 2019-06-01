@@ -10,6 +10,7 @@ JavaScript高级学习
 ### [lesson07-认识函数](#lesson07)
 ### [lesson08-认识回调函数](#lesson08)
 ### [lesson09-IIFE](#lesson09)
+### [lesson10-函数中的this](#lesson10)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -106,3 +107,14 @@ JavaScript高级学习
 	})()
 	$().test() // 2
 	```
+
+**<span id="lesson10">函数中的this</span>**
+1. this是什么？
+	* 所有函数内部都有一个变量叫this
+	* 它的值是调用函数的当前对象
+	* 任何函数本质上都是通过某一个对象来调用的
+2. this指什么？
+	* test() // window
+	* p.test() // p
+	* new Test() // 新创建的实例对象
+	* p.call/apply(obj) // obj
