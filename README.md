@@ -17,6 +17,7 @@ JavaScript高级学习
 ### [lesson14-hold住原型链](#lesson14)
 ### [lesson15-补充原型链](#lesson15)
 ### [lesson16-原型链的属性问题](#lesson16)
+### [lesson17-探索instanceof的秘密](#lesson17)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -183,3 +184,9 @@ JavaScript高级学习
 1. 读取对象的属性时，会自动的到原型链中查找
 2. 设置对象的属性时，不会去查找原型链，如果当前对象中没有该属性，直接在当前对象中添加此属性并设置其值
 3. 方法一般定义在原型上，属性一般通过构造函数定义在对象本身上
+
+**<span id="lesson17">探索instanceof的秘密</span>**
+1. instanceof是如何判断的？
+	* 判断的表达式：A instanceof B，其中A是实例对象，B是构造函数
+	* 如果B函数的显示原型对象在A对象的原型链上，则结果为true，反之为false
+2. 函数的原型对象默认是一个空的Object对象，也就是说*所有函数的原型对象都是Object的实例*，即Function.prototype.\__proto__ === Object.prototype //true
