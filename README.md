@@ -7,7 +7,8 @@ JavaScript高级学习
 ### <a href="#lesson04">lesson04-谈谈对变量赋值的理解</a>
 ### [lesson05-值传递、址传递、释放内存](#lesson05)
 ### [lesson06-什么是对象?](#lesson06)
-### [lesson07-认识一下函数](#lesson07)
+### [lesson07-认识函数](#lesson07)
+### [lesson08-认识回调函数](#lesson07)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -60,7 +61,7 @@ JavaScript高级学习
 5. 属性由名和值组成，名的类型是字符串，值的类型是任意类型
 6. 如何访问对象中的数据？ . 和 []，两种方法，但是前者有时候不能用，后者可以通用，属性名包含特殊字符诸如-时前者不能用，当属性名是一个变量不确定时，不能用前者
 
-**<span id="lesson07">认识一下函数</span>**
+**<span id="lesson07">认识函数</span>**
 1. 什么是函数？函数是用来实现特定功能的n行语句的封装体
 2. 只有函数是可执行的，其他类型是不能执行的
 3. 为什么要使用函数？为了实现代码的复用性，函数体现的是封装的思想
@@ -70,3 +71,14 @@ JavaScript高级学习
 	* obj.fn() 通过对象来调用
 	* new Fn() new调用
 	* fn.call/apply(obj) 临时调用，临时让fn成为obj对象的方法进行调用
+
+**<span id="lesson08">认识回调函数</span>**
+1. 什么是回调函数？
+	* 自己定义的
+	* 自己没有调
+	* 但是函数最终执行了
+2. 常见的回调函数有哪些？
+	* dom事件回调 document.getElementById('#id').onclick = function() {...}
+	* 定时器回调 setTimeout(function() {...}, time)
+	* ajax
+	* 生命周期回调
