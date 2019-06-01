@@ -14,6 +14,7 @@ JavaScript高级学习
 ### [lesson11-分号到底加不加](#lesson11)
 ### [lesson12-函数的prototype](#lesson12)
 ### [lesson13-显示原型与隐式原型](#lesson13)
+### [lesson14-hold住原型链](#lesson14)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -152,3 +153,15 @@ JavaScript高级学习
 6. function Fn() {} //内部语句：this.prototype = {}
 7. var fn = new Fn() // 内部语句：this.__proto__ = Fn.prototype
 8. Fn.prototype === fn.__proto__ // true
+
+**<span id="lesson14">hold住原型链</span>**
+1. 原型链也被称为隐式原型链
+2. 访问一个对象的属性时，现在自身的属性中查找，若找到就返回，如果找不到，就沿着\__proto__向上查找
+3. 原型链的尽头是：Object.prototype.\__proto__ //null
+4. 原型链是用来查找对象的属性(方法)，如果要查找变量，那么需要沿着作用域链
+5. *JS引擎在加载页面的时候，会把内置的函数先加载进来，再去执行代码，比如加载Object*
+6. 所有的函数\__proto__都是一样的，因为都是new Function产生的
+7. 对象上没有的属性，其值为undefined
+8. 所谓的原型继承指的是构造函数实例对象自动拥有构造函数原型对象的属性和方法
+9. 原型继承利用的是原型链
+10. function Function() {...}，它的prototype和\__proto__都是指向同一片区域，即Function.prototype
