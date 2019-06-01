@@ -5,7 +5,7 @@ JavaScript高级学习
 ### <a href="#lesson02">lesson02-再谈数据类型相关问题</a>
 ### [lesson03-对内存的认识](#lesson03)
 ### <a href="#lesson04">lesson04-谈谈对变量赋值的理解</a>
-### [值传递、址传递、释放内存](#lesson05)
+### [lesson05-值传递、址传递、释放内存](#lesson05)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
