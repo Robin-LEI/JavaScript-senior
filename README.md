@@ -8,7 +8,8 @@ JavaScript高级学习
 ### [lesson05-值传递、址传递、释放内存](#lesson05)
 ### [lesson06-什么是对象?](#lesson06)
 ### [lesson07-认识函数](#lesson07)
-### [lesson08-认识回调函数](#lesson07)
+### [lesson08-认识回调函数](#lesson08)
+### [lesson09-IIFE](#lesson09)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -82,3 +83,26 @@ JavaScript高级学习
 	* 定时器回调 setTimeout(function() {...}, time)
 	* ajax
 	* 生命周期回调
+
+**<span id="lesson09">IIFE-立即执行的函数表达式</span>**
+1. 匿名函数自调用
+	```
+	(function() {...})()
+	```
+2. 用于隐藏实现，不会污染外部(全局)的命名空间
+3. 小demo
+	```
+	;(function() {
+		var a = 1
+		function test() {
+			console.log(++a)
+		}
+		window.$ = function() {
+			return {
+				test: test
+			}
+		}
+	}
+	})()
+	$().test() // 2
+	```
