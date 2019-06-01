@@ -12,6 +12,7 @@ JavaScript高级学习
 ### [lesson09-IIFE](#lesson09)
 ### [lesson10-函数中的this](#lesson10)
 ### [lesson11-分号到底加不加](#lesson11)
+### [lesson12-函数的prototype](#lesson12)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -134,3 +135,9 @@ JavaScript高级学习
 	[1,2,3].forEach(item => {...}) // 程序出错
 	```
 5. 上述条件下加分号，也有利与降低代码合并带来的风险
+
+**<span id="lesson12">函数的prototype</span>**
+1. 每一个函数都有一个prototype属性，默认指向一个Object空对象(也叫做原型对象)
+2. 什么是空对象？就是其中没有我们的属性
+3. 原型对象中有一个属性constructor，它指向函数对象
+4. 给原型对象添加属性(一般是添加方法)，供实例对象访问

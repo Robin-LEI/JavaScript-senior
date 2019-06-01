@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的prototype</title>
+</head>
+<body>
+	<script>
+		function func() {
+
+		}
+		console.log(func.prototype) //每一个函数都有一个属性叫做prototype
+		console.log(func.prototype.constructor === func) //原型对象上有一个属性叫做constructor，指向函数对象
+		function Test() {
+
+		}
+		Test.prototype.test = function() {
+			console.log('hello world!')
+		}
+		const test = new Test()
+		test.test() // 给原型对象上添加一个属性(一般是添加方法)，实例对象可以访问
+	</script>
+</body>
+</html>
