@@ -1,5 +1,5 @@
 # JavaScript-senior
-JavaScript高级学习  
+对JavaScript高级认知  
 目录  
 ### [lesson01-数据类型](#lesson01)
 ### <a href="#lesson02">lesson02-再谈数据类型相关问题</a>
