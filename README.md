@@ -15,6 +15,7 @@ JavaScript高级学习
 ### [lesson12-函数的prototype](#lesson12)
 ### [lesson13-显示原型与隐式原型](#lesson13)
 ### [lesson14-hold住原型链](#lesson14)
+### [lesson15-补充原型链](#lesson15)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -165,3 +166,14 @@ JavaScript高级学习
 8. 所谓的原型继承指的是构造函数实例对象自动拥有构造函数原型对象的属性和方法
 9. 原型继承利用的是原型链
 10. function Function() {...}，它的prototype和\__proto__都是指向同一片区域，即Function.prototype
+
+**<span id="lesson15">补充原型链</span>**
+1. 上面谈到过，任何一个函数它的显示原型默认都是一个空的Object对象
+2. 但凡事都有例外，function Object() {...}它的显示原型是Object prototype
+3. Function是它自身的一个实例，，所有函数都是Function的实例
+4. Object的原型对象时原型链的尽头
+5. demo
+	```
+	Object.prototype instanceof Object // false，因为Object.prototype.\__proto__为null  
+	Function.prototype instanceof Object // true
+	```
