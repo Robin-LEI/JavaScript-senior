@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量提升与函数提升</title>
+</head>
+<body>
+	<script>
+		fn() //可以调用
+		fn2() //报错
+		function fn() {
+
+		}
+		var fn2 = function() {
+
+		}
+	</script>
+</body>
+</html>

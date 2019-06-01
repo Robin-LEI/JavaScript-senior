@@ -18,6 +18,7 @@ JavaScript高级学习
 ### [lesson15-补充原型链](#lesson15)
 ### [lesson16-原型链的属性问题](#lesson16)
 ### [lesson17-探索instanceof的秘密](#lesson17)
+### [lesson18-变量声明提升与函数提升](#lesson18)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -192,3 +193,7 @@ JavaScript高级学习
 	* 判断的表达式：A instanceof B，其中A是实例对象，B是构造函数
 	* 如果B函数的显示原型对象在A对象的原型链上，则结果为true，反之为false
 2. 函数的原型对象默认是一个空的Object对象，也就是说*所有函数的原型对象都是Object的实例*，即Function.prototype.\__proto__ === Object.prototype //true
+
+**<span id="lesson18">变量声明提升与函数提升</span>**
+1. 变量声明提升，就是指通过var声明(定义)的变量，在定义语句之前局可以访问到，但是其值为undefined
+2. 函数声明提升，是指通过function声明的函数，在之前就可以直接调用，值为函数定义(对象)
