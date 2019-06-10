@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习题</title>
+</head>
+<body>
+	<script>
+		/*
+		*	涉及到变量提升与函数提升
+		* 	变量提升的优先级高于函数提升
+		*	此题相当于：var a; function a() {};console.log(typeof a);
+		*/
+		function a() {}
+		var a
+		console.log(typeof a) // function
+
+		if(!(b in window)) { // b in window 为 true
+			var b = 3
+		}
+		console.log(b) // undefined
+
+		/*
+		*	此题相当于：
+		* 	var c;function c(c) {};c = 1;c(2);
+		*/
+		var c = 1
+		function c(c) {
+			console.log(c)
+			var c = 3
+		}
+		c(2) // c is not a function
+	</script>
+</body>
+</html>
