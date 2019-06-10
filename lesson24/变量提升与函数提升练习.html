@@ -30,6 +30,33 @@
 			var c = 3
 		}
 		c(2) // c is not a function
+
+	</script>
+
+	<script>
+		console.log('gb' + i)
+		var i = 1
+		foo(1)
+		function foo(i) {
+			if(i == 4) {
+				return
+			}
+			console.log('fb' + i)
+			foo(i + 1)
+			console.log('fe' + i)
+		}
+		console.log('ge' + i)
+
+		/*
+		*	gb: undefined
+		*	fb: 1
+		*	fb: 2
+		*	fb: 3
+		*	fe: 3
+		*	fe: 2
+		* 	fe: 1
+		*	ge: 1
+		*/
 	</script>
 </body>
 </html>
