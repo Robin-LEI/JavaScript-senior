@@ -21,6 +21,7 @@
 ### [lesson18-变量声明提升与函数提升](#lesson18)
 ### [lesson19-执行上下文](#lesson19)
 ### [lesson20-执行上下文栈](#lesson20)
+### [lesson21-作用域](#lesson21)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
