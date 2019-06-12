@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>practice</title>
+</head>
+<body>
+	<script>
+		var x = 10
+		function fn() {
+			console.log(x)
+		}
+		function show(f) {
+			var x = 20
+			f()
+		}
+		show(fn)
+	</script>
+
+	<script>
+		var fn = function() {
+			console.log(fn)
+		}
+		fn()
+		var obj = {
+			fn2: function() {
+				console.log(fn2) // fn2先找自己，自己没有，要想获取自己，需要写this.fn2，在找全局，全局也没有fn2，所以报错
+			}
+		}
+		obj.fn2()
+	</script>
+</body>
+</html>
