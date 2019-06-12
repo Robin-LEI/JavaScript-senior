@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环遍历加监听</title>
+</head>
+<body>
+	<button>test1</button>
+	<button>test2</button>
+	<button>test3</button>
+	<script>
+		var btns = document.getElementsByTagName('button')
+		// methods 1
+		// for(var i = 0, len = btns.length; i < len; i++) {
+		// 	var btn = btns[i]
+		// 	btn.index = i
+		// 	btn.onclick = function() {
+		// 		console.log('click' + (this.index + 1))
+		// 	}
+		// }
+		// methods 2
+		for(var i = 0, len = btns.length; i < len; i++) {
+			(function(i) {
+				btns[i].onclick = function() {
+					console.log('click' + (i + 1))
+				}
+			})(i)
+		}
+	</script>
+</body>
+</html>
