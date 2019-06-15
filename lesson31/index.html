@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+</head>
+<body>
+	<script>
+		function fn1() {
+			var a = 2
+			function fn2() {
+				a++
+				console.log(a)
+			}
+			function fn3() {
+				a--
+				console.log(a)
+			}
+			return fn3
+		}
+		var f = fn1() // 在fn1执行结束后，fn2被释放，fn3被释放，但是fn3指向的那个对象没有被释放，由f接管，a也没有被释放，因为被fn3指向的那个对象引用着
+		f()
+		f()
+	</script>
+</body>
+</html>
