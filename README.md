@@ -30,6 +30,7 @@
 ### [lesson27-闭包的应用-自定义JS模块](#lesson27)
 ### [lesson28-内存溢出&内存泄漏](#lesson28)
 ### [lesson29-对象创建模式](#lesson29)
+### [lesson30-原型链继承](#lesson30)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -379,7 +380,7 @@ Person.prototype.setName = function() {
 **实例对象.constructor，查看实例对象的构造安函数是谁**
 * Sub.prototype.constructor = Sub
 
-**原型链继承**
+**<span id="lesson30">原型链继承</span>**
 * 套路
 	* 定义父类型构造函数
 	* 给父类型的原型添加方法
