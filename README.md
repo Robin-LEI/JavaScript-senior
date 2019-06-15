@@ -369,8 +369,9 @@ function Person(name, age) {
 Person.prototype.setName = function() {
 	
 }
+	
+```
 	* 属性在函数中初始化
 	* 方法添加到原型上
 	* 原型方法给实例对象调用
 	* 适用于需要创建多个类型确定的对象
-```
