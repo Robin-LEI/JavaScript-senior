@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>借用构造函数继承</title>
+</head>
+<body>
+	<script>
+		function Person(name, age) {
+			this.name = name
+			this.age = age
+		}
+		function Studtent(name, age, price) {
+			// 相当于 this.Person(name, age)
+			Person.call(this,name, age)
+			this.price = price
+		} 
+		var s = new Studtent('Tom', 20, 14000)
+		console.log(s.name, s.age, s.price)
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组合继承</title>
+</head>
+<body>
+	<script>
+		function Person(name, age) {
+			this.name = name
+			this.age = age
+		}
+		Person.prototype.setName = function(name) {
+			this.name = name
+		}
+		function Student(name, age, price) {
+			Person.call(this, name, age)
+			this.price = price
+		}
+		Student.prototype = new Person()
+		Student.prototype.constructor = Student
+		Student.prototype.setPrice = function(price) {
+			this.price = price
+		}
+		var s = new Student('robin', 23, 16000)
+		s.setName('robin lei')
+		s.setPrice(19000)
+		console.log(s.name, s.age, s.price)
+	</script>
+</body>
+</html>
