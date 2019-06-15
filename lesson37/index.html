@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型链继承</title>
+</head>
+<body>
+	<script>
+		// 定义父类型的构造函数
+		function Super() {
+			this.supProp = 'Super property'
+		}
+		// 给父类型的原型添加方法
+		Super.prototype.showSuperProperty = function() {
+			console.log(this.supProp)
+		}
+		// 定义子类型的构造函数
+		function Sub() {
+			this.subProp = 'sub property'
+		}
+		// 创建父类型的实例对象赋值给子类型的原型
+		Sub.prototype = new Super()
+		// 将子类型原型的构造属性设置为子类型
+		Sub.prototype.constructor = Sub
+		// 给子类型原型添加方法
+		Sub.prototype.showSubProperty = function() {
+			console.log(this.subProp)
+		}
+		// 创建子类型的对象，可以调用父类型的方法
+		var s = new Sub()
+		console.log(s.subProp)
+		s.showSubProperty()
+		s.showSuperProperty()
+	</script>
+</body>
+</html>
