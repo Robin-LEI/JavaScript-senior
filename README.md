@@ -29,6 +29,7 @@
 ### [lesson26-闭包的生命周期](#lesson26)
 ### [lesson27-闭包的应用-自定义JS模块](#lesson27)
 ### [lesson28-内存溢出&内存泄漏](#lesson28)
+### [lesson29-对象创建模式](#lesson29)
 
 **<span id="lesson01">数据类型</span>**
 1. 数据类型分为基本数据类型和引用（对象）数据类型
@@ -320,3 +321,56 @@
 		* 意外的全局变量
 		* 没有及时清理的计时器或回调函数
 		* 闭包
+
+**<span id="lesson29">对象创建模式</span>**
+* 对象创建模式
+```
+new Object()
+```
+	* 开始时对象内部数据不确定
+* 字面量创建模式
+```
+var obj = {}
+```
+	* 适用于对象内部数据确定
+	* 弊端就是在某些场景下会有重复代码
+* 工厂模式
+```
+function Person(name, age) {
+	var obj = {
+		name: name,
+		age: age
+	}
+	return obj
+}
+```
+	* 通过工厂函数动态创建对象并返回
+	* 适用于创建多个对象
+	* 创建出来的对象都是只有一种类型，object
+* 自定义构造函数模式
+```
+function Person(name, age) {
+	this.name = name
+	this.age = age
+	this.setName = function() {
+		
+	}
+}
+```
+	* 通过new创建
+	* 创建多个类型确定的对象
+	* 每一个对象都具有相同的数据，浪费内存
+* 构造函数+原型组合模式
+```
+function Person(name, age) {
+	this.name = name
+	this.age = age
+}
+Person.prototype.setName = function() {
+	
+}
+	* 属性在函数中初始化
+	* 方法添加到原型上
+	* 原型方法给实例对象调用
+	* 适用于需要创建多个类型确定的对象
+```
